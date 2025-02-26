@@ -3,7 +3,7 @@ from flask_cors import CORS  # Import CORS
 import google.generativeai as genai
 
 app = Flask(__name__)
-CORS(app)  # Enable CORS for all routes
+CORS(app, resources={r"/*": {"origins": "https://piyushgala03.github.io"}})  # Allow GitHub Pages
 
 # Configure Gemini API
 GEMINI_API_KEY = "AIzaSyCTBfudQJY6p3mcrEPV2eeUFzCv_XoFPJA"
